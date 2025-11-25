@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'models/expense.dart';
+import 'package:flutter_application_1/models/expense.dart';
+import 'package:flutter_application_1/widgets/expenses_list.dart';
 
 class ExpensesApp extends StatefulWidget {
   const ExpensesApp({super.key});
@@ -18,8 +18,13 @@ class _ExpensesAppState extends State<ExpensesApp> {
       category: Category.food,
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(title: const Text("Expense Tracker")),
+      body: ExpensesList(expensesList: _registeredExpensesList),
+    );
   }
 }
+cdcd "flutter_application_1"
