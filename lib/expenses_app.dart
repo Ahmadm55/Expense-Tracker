@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/models/expense.dart';
-import 'package:flutter_application_1/widgets/expenses_list.dart';
+import 'models/expense.dart';
+import 'widgets/expenses_list.dart';
 
 class ExpensesApp extends StatefulWidget {
   const ExpensesApp({super.key});
@@ -12,11 +12,12 @@ class ExpensesApp extends StatefulWidget {
 class _ExpensesAppState extends State<ExpensesApp> {
   final List<Expense> _registeredExpensesList = [
     Expense(
+      title: 'Burger',
       amount: 5,
       date: DateTime.now(),
-      title: 'Burger',
       category: Category.food,
     ),
+    // Add more sample expenses if you like
   ];
 
   @override
@@ -27,4 +28,3 @@ class _ExpensesAppState extends State<ExpensesApp> {
     );
   }
 }
-cdcd "flutter_application_1"
